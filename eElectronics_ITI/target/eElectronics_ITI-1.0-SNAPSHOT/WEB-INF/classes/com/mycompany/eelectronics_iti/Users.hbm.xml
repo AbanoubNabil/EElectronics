@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 26, 2018 3:42:39 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.eelectronics_iti.Users" table="users" catalog="eelectronics_iti" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="user_name" length="45" not-null="true" />
+        </property>
+        <property name="userEmail" type="string">
+            <column name="user_email" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="userPassword" type="string">
+            <column name="user_password" length="45" not-null="true" />
+        </property>
+        <property name="userGender" type="string">
+            <column name="user_gender" length="45" not-null="true" />
+        </property>
+        <property name="userPhone" type="string">
+            <column name="user_phone" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="userBalance" type="int">
+            <column name="user_balance" not-null="true" />
+        </property>
+        <set name="orderses" table="orders" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="com.mycompany.eelectronics_iti.Orders" />
+        </set>
+    </class>
+</hibernate-mapping>

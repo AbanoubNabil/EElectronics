@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="eelectronics_iti"/>
+  <table-filter match-name="users"/>
+  <table-filter match-name="product_order"/>
+  <table-filter match-name="products"/>
+  <table-filter match-name="admin"/>
+  <table-filter match-name="orders"/>
+</hibernate-reverse-engineering>

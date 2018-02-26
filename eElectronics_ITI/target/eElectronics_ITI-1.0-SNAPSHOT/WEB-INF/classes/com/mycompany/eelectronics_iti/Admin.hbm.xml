@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 26, 2018 3:42:39 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.eelectronics_iti.Admin" table="admin" catalog="eelectronics_iti" optimistic-lock="version">
+        <id name="adminId" type="java.lang.Integer">
+            <column name="admin_id" />
+            <generator class="identity" />
+        </id>
+        <property name="adminName" type="string">
+            <column name="admin_name" length="45" not-null="true" />
+        </property>
+        <property name="adminPassword" type="string">
+            <column name="admin_password" length="45" not-null="true" />
+        </property>
+        <property name="adminPhone" type="string">
+            <column name="admin_phone" length="45" not-null="true" />
+        </property>
+        <property name="adminGender" type="string">
+            <column name="admin_gender" length="45" not-null="true" />
+        </property>
+        <property name="adminCountry" type="string">
+            <column name="admin_country" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
