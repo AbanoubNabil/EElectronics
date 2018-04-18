@@ -14,9 +14,9 @@ public class Products  implements java.io.Serializable {
 
      private int productId;
      private String productName;
-     private BigDecimal productPrice;
+     private double productPrice;
      private String productCategory;
-     private BigDecimal productQuantity;
+     private int productQuantity;
      private String productImage;
      private String productDescription;
      private Set orderses = new HashSet(0);
@@ -25,7 +25,7 @@ public class Products  implements java.io.Serializable {
     }
 
 	
-    public Products(int productId, String productName, BigDecimal productPrice, String productCategory, BigDecimal productQuantity, String productImage, String productDescription) {
+    public Products(int productId, String productName, int productPrice, String productCategory, int productQuantity, String productImage, String productDescription) {
         this.productId = productId;
         this.productName = productName;
         this.productPrice = productPrice;
@@ -34,7 +34,7 @@ public class Products  implements java.io.Serializable {
         this.productImage = productImage;
         this.productDescription = productDescription;
     }
-    public Products(int productId, String productName, BigDecimal productPrice, String productCategory, BigDecimal productQuantity, String productImage, String productDescription, Set orderses) {
+    public Products(int productId, String productName, int productPrice, String productCategory, int productQuantity, String productImage, String productDescription, Set orderses) {
        this.productId = productId;
        this.productName = productName;
        this.productPrice = productPrice;
@@ -59,11 +59,11 @@ public class Products  implements java.io.Serializable {
     public void setProductName(String productName) {
         this.productName = productName;
     }
-    public BigDecimal getProductPrice() {
+    public double getProductPrice() {
         return this.productPrice;
     }
     
-    public void setProductPrice(BigDecimal productPrice) {
+    public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
     public String getProductCategory() {
@@ -73,11 +73,11 @@ public class Products  implements java.io.Serializable {
     public void setProductCategory(String productCategory) {
         this.productCategory = productCategory;
     }
-    public BigDecimal getProductQuantity() {
+    public int getProductQuantity() {
         return this.productQuantity;
     }
     
-    public void setProductQuantity(BigDecimal productQuantity) {
+    public void setProductQuantity(int productQuantity) {
         this.productQuantity = productQuantity;
     }
     public String getProductImage() {

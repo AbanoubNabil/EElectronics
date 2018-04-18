@@ -17,22 +17,24 @@ public class Users  implements java.io.Serializable {
      private String userPassword;
      private String userGender;
      private String userPhone;
-     private int userBalance;
+     private double userBalance;
+     private String userAddress;
      private Set orderses = new HashSet(0);
 
     public Users() {
     }
 
 	
-    public Users(String userName, String userEmail, String userPassword, String userGender, String userPhone, int userBalance) {
+    public Users(String userName, String userEmail, String userPassword, String userGender, String userPhone, double userBalance,String userAddress) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userGender = userGender;
         this.userPhone = userPhone;
         this.userBalance = userBalance;
+        this.userAddress = userAddress;
     }
-    public Users(String userName, String userEmail, String userPassword, String userGender, String userPhone, int userBalance, Set orderses) {
+    public Users(String userName, String userEmail, String userPassword, String userGender, String userPhone, double userBalance, Set orderses,String userAddress) {
        this.userName = userName;
        this.userEmail = userEmail;
        this.userPassword = userPassword;
@@ -40,6 +42,7 @@ public class Users  implements java.io.Serializable {
        this.userPhone = userPhone;
        this.userBalance = userBalance;
        this.orderses = orderses;
+       this.userAddress = userAddress;
     }
    
     public Integer getUserId() {
@@ -84,11 +87,11 @@ public class Users  implements java.io.Serializable {
     public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
     }
-    public int getUserBalance() {
+    public double getUserBalance() {
         return this.userBalance;
     }
     
-    public void setUserBalance(int userBalance) {
+    public void setUserBalance(double userBalance) {
         this.userBalance = userBalance;
     }
     public Set getOrderses() {
@@ -97,6 +100,14 @@ public class Users  implements java.io.Serializable {
     
     public void setOrderses(Set orderses) {
         this.orderses = orderses;
+    }
+
+    public String getUserAddress() {
+        return userAddress;
+    }
+
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
     }
 
 

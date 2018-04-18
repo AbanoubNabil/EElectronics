@@ -11,6 +11,9 @@
         <property name="adminName" type="string">
             <column name="admin_name" length="45" not-null="true" />
         </property>
+        <property name="adminEmail" type="string">
+            <column name="admin_email" length="45" not-null="true" />
+        </property>
         <property name="adminPassword" type="string">
             <column name="admin_password" length="45" not-null="true" />
         </property>

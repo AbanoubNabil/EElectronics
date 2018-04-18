@@ -8,8 +8,12 @@
             <column name="user_id" />
             <generator class="identity" />
         </id>
+        
         <property name="userName" type="string">
             <column name="user_name" length="45" not-null="true" />
+        </property>
+        <property name="userAddress" type="string">
+            <column name="user_address" length="150" not-null="true" />
         </property>
         <property name="userEmail" type="string">
             <column name="user_email" length="45" not-null="true" unique="true" />
@@ -23,10 +27,10 @@
         <property name="userPhone" type="string">
             <column name="user_phone" length="45" not-null="true" unique="true" />
         </property>
-        <property name="userBalance" type="int">
+        <property name="userBalance" type="double">
             <column name="user_balance" not-null="true" />
         </property>
-        <set name="orderses" table="orders" inverse="true" lazy="true" fetch="select">
+        <set name="orderses" table="orders" inverse="true" lazy="false" fetch="select">
             <key>
                 <column name="user_id" not-null="true" />
             </key>

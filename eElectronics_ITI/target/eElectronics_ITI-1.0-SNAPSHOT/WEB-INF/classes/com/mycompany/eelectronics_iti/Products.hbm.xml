@@ -6,19 +6,19 @@
     <class name="com.mycompany.eelectronics_iti.Products" table="products" catalog="eelectronics_iti" optimistic-lock="version">
         <id name="productId" type="int">
             <column name="product_id" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="productName" type="string">
             <column name="product_name" length="45" not-null="true" />
         </property>
-        <property name="productPrice" type="big_decimal">
-            <column name="product_price" precision="30" scale="0" not-null="true" />
+        <property name="productPrice" type="double">
+            <column name="product_price"  not-null="true" />
         </property>
         <property name="productCategory" type="string">
             <column name="product_category" length="45" not-null="true" />
         </property>
-        <property name="productQuantity" type="big_decimal">
-            <column name="product_quantity" precision="30" scale="0" not-null="true" />
+        <property name="productQuantity" type="int">
+            <column name="product_quantity"  not-null="true" />
         </property>
         <property name="productImage" type="string">
             <column name="product_image" length="100" not-null="true" />

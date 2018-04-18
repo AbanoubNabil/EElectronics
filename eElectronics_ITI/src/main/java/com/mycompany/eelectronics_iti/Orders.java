@@ -15,14 +15,14 @@ public class Orders  implements java.io.Serializable {
      private Users users;
      private String orderDate;
      private int orderAmount;
-     private int orderPrice;
+     private double orderPrice;
      private Set productses = new HashSet(0);
 
     public Orders() {
     }
 
 	
-    public Orders(Users users, String orderDate, int orderAmount, int orderPrice) {
+    public Orders(Users users, String orderDate, int orderAmount, double orderPrice) {
         this.users = users;
         this.orderDate = orderDate;
         this.orderAmount = orderAmount;
@@ -64,11 +64,11 @@ public class Orders  implements java.io.Serializable {
     public void setOrderAmount(int orderAmount) {
         this.orderAmount = orderAmount;
     }
-    public int getOrderPrice() {
+    public double getOrderPrice() {
         return this.orderPrice;
     }
     
-    public void setOrderPrice(int orderPrice) {
+    public void setOrderPrice(double orderPrice) {
         this.orderPrice = orderPrice;
     }
     public Set getProductses() {

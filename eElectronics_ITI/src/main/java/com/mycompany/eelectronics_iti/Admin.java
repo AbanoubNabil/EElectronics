@@ -15,16 +15,18 @@ public class Admin  implements java.io.Serializable {
      private String adminPhone;
      private String adminGender;
      private String adminCountry;
+     private String adminEmail;
 
     public Admin() {
     }
 
-    public Admin(String adminName, String adminPassword, String adminPhone, String adminGender, String adminCountry) {
+    public Admin(String adminName, String adminPassword, String adminPhone, String adminGender, String adminCountry,String adminEmail) {
        this.adminName = adminName;
        this.adminPassword = adminPassword;
        this.adminPhone = adminPhone;
        this.adminGender = adminGender;
        this.adminCountry = adminCountry;
+       this.adminEmail = adminEmail;
     }
    
     public Integer getAdminId() {
@@ -68,6 +70,14 @@ public class Admin  implements java.io.Serializable {
     
     public void setAdminCountry(String adminCountry) {
         this.adminCountry = adminCountry;
+    }
+
+    public String getAdminEmail() {
+        return adminEmail;
+    }
+
+    public void setAdminEmail(String adminEmail) {
+        this.adminEmail = adminEmail;
     }
 
 

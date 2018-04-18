@@ -12,17 +12,17 @@
             <column name="user_id" not-null="true" />
         </many-to-one>
         <property name="orderDate" type="string">
-            <column name="order_date" length="45" not-null="true" />
+            <column name="order_date" length="45" not-null="false" />
         </property>
         <property name="orderAmount" type="int">
-            <column name="order_amount" not-null="true" />
+            <column name="order_amount" not-null="false" />
         </property>
-        <property name="orderPrice" type="int">
-            <column name="order_price" not-null="true" />
+        <property name="orderPrice" type="double">
+            <column name="order_price" not-null="false" />
         </property>
         <set name="productses" table="product_order" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="order_id" not-null="true" />
+                <column name="order_id" not-null="false" />
             </key>
             <many-to-many entity-name="com.mycompany.eelectronics_iti.Products">
                 <column name="product_id" not-null="true" />
